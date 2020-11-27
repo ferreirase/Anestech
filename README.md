@@ -20,29 +20,57 @@
   </a>
 </p>
 
-## :rocket: Sobre o projeto
+## :rocket: O desafio
 
-O Desafio:
-Estamos com problemas em saber quanto tempo foi gasto nas tarefas que efetuamos diariamente, para conseguirmos registrar tudo o que fazemos precisamos de um pequeno sistema para registrar as tarefas e que seja possível informar quando ela foi iniciada, quando foi finalizada e o responsável da tarefa.
-Requisitos:
-Como todo sistema precisamos precisamos do CRUD para gerenciamento de usuários e que para utilizar o sistema o usuário tem que estar autenticado.
-A tela inicial do sistema deve listar as tarefas em andamento.
+Estamos com problemas em saber quanto tempo é gasto nas tarefas que efetuamos diariamente. Para conseguirmos registrar tudo o que fazemos precisamos de uma pequena API para registrar as tarefas e que seja possível informar quando ela foi iniciada, quando foi finalizada e o responsável da tarefa. Precisamos também, definir cargos para os usuários, sendo eles:
 
-    • Os campos para o cadastro de uma nova tarefa devem conter
-    • Descrição
-    • Responsável
-    • Data e hora de inicio
-    • Data e hora de finalização
-    • Observações:
-    • O Back-end deve ser desenvolvido no modelo de API RESTFUL com Node.js.
-    • A Autenticação deve ser feita com JWT
-Front-end deve ser desenvolvido com algum framework Javascript (React, Vue.js, Angular, etc..)
+#### Administrador: 
+```
+- Pode listar, criar, alterar e deletar usuários; 
+- Acessar os indicadores; 
+- Tudo que um agente pode fazer. 
+```
 
-Deve ser possível realizar filtros como:
-  - Usuário
-  - Datas
-  - Pesquisa na descrição da tarefa
+#### Agente: 
+```
+- Pode criar e alterar tarefas.
+```
 
+## :rocket: Requisitos
+
+#### Estrutura de usuários:
+```
+- Nome;
+- Email.
+```
+
+#### Estrutura das Tarefas:
+```
+- Estrutura das Tarefas:
+- Descrição;
+- Responsável (usuário);
+- Status (aberto, fazendo, finalizado);
+- Data e hora de início (quando a tarefa entra no status “fazendo”);
+- Data e hora de finalização;
+- Data e hora de criação.
+```
+
+#### Na rota que lista todas as tarefas:
+```
+- Deve ser possível realizar filtros de pesquisa na descrição e status da tarefa.
+- Opção para ordenar os seguintes campos de forma crescente ou decrescente:
+- Responsável;
+- Status;
+```
+
+#### Criação Rota de Indicadores:
+```
+- Desempenho geral dos usuários em determinado período de tempo:
+- Número de tarefas concluídas;
+- Média de tarefas concluídas por usuário;
+- Tempo médio entre “aberto” e “fazendo” das tarefas;
+- Tempo médio entre “fazendo” e “finalizado” das tarefas.
+```
 
 ### :cd: Rodando a aplicação!
 
