@@ -36,7 +36,7 @@ Estamos com problemas em saber quanto tempo é gasto nas tarefas que efetuamos d
 - Pode criar e alterar tarefas.
 ```
 
-## :rocket: Requisitos
+## :page_facing_up: Requisitos
 
 #### Estrutura de usuários:
 ```
@@ -46,7 +46,6 @@ Estamos com problemas em saber quanto tempo é gasto nas tarefas que efetuamos d
 
 #### Estrutura das Tarefas:
 ```
-- Estrutura das Tarefas:
 - Descrição;
 - Responsável (usuário);
 - Status (aberto, fazendo, finalizado);
@@ -74,19 +73,16 @@ Estamos com problemas em saber quanto tempo é gasto nas tarefas que efetuamos d
 
 ### :cd: Rodando a aplicação!
 
-Tenha em sua máquina um banco de Dados Postgres e forneça as credenciais de acesso no arquivo *``` backend/ormconfig.json ```*.
+Tenha em sua máquina um banco de dados *``` Postgres ```* e forneça as credenciais de acesso no arquivo *``` src/config/database.js ```*.
  
-#### Subindo o servidor backend
+#### Subindo o servidor
   1. Clone/Baixe este repositório na sua máquina;
-  2. Abrir o terminal na raiz da pasta *``` backend ```* e rode "npm i" para download das dependências;
-  3. Ainda no terminal na raiz da pasta *``` backend ```* rode "npm run start:dev" para subir o servidor backend; Cerifique se o banco de Dados está em pé;
+  2. Abra o terminal na raiz da pasta *``` backend ```* e rode "npm i" ou ainda "yarn install" para download das dependências do projeto;
+  3. Ainda no terminal na raiz da pasta *``` backend ```*, rode "npm run dev" ou ainda "yarn dev" para subir o servidor backend; Certifique se o banco de dados     foi configurado antes e se está rodando;
   4. Pronto, seu servidor backend está no ar e pronto pra ser acessado no endereço "http://localhost:3333". 
   
-  #### Subindo o servidor frontend
-  1. Clone/Baixe este repositório na sua máquina;
-  2. Abrir o terminal na raiz da pasta *``` frontend ```* e rode "npm i" para download das dependências;
-  3. Ainda no terminal na raiz da pasta *``` frontend ```* rode "npm run start" para subir o servidor frontend; 
-  4. Pronto, seu servidor frontend está pronto pra ser acessado no endereço "http://localhost:3000;
+
+## :heavy_exclamation_mark: Rotas, Verbos e parâmetros
 
 ## :memo: Tecnologias Utilizadas no Projeto
 
