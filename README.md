@@ -77,9 +77,10 @@ Tenha em sua máquina um banco de dados *``` Postgres ```* e forneça as credenc
  
 #### Subindo o servidor
   1. Clone/Baixe este repositório na sua máquina;
-  2. Abra o terminal na raiz da pasta *``` backend ```* e rode "npm i" ou ainda "yarn install" para download das dependências do projeto;
-  3. Ainda no terminal na raiz da pasta *``` backend ```*, rode "npm run dev" ou ainda "yarn dev" para subir o servidor backend; Certifique se o banco de dados     foi configurado antes e se está rodando;
-  4. Pronto, seu servidor backend está no ar e pronto pra ser acessado no endereço "http://localhost:3333". 
+  2. Abra o terminal na raiz da pasta *``` do projeto ```* e rode "npm i" ou ainda "yarn install" para download das dependências do projeto;
+  3. No terminal, rode o comando *``` yarn sequelize db:migrate ```* ou ainda *``` npm run sequelize db:migrate ```* para subir as migrations para o banco de       dados; Espere finalizar e então rode o comando *``` yarn sequelize db:seed:all ```* ou ainda  *``` npm run sequelize db:seed:all ```* para subir as seeds com os    dados de um usuário administrador. A seed se encontra na pasta: ``` src/database/seeds ```* .
+  4. Terminado esse processo, rode "npm run dev" ou ainda "yarn dev" para subir o servidor backend; Certifique se o banco de dados foi configurado antes e se está rodando;
+  5. Pronto, seu servidor backend está no ar e pronto pra ser acessado no endereço "http://localhost:3333". 
   
 
 ## :heavy_exclamation_mark: Rotas, Verbos e Parâmetros
