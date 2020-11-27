@@ -82,17 +82,111 @@ Tenha em sua máquina um banco de dados *``` Postgres ```* e forneça as credenc
   4. Pronto, seu servidor backend está no ar e pronto pra ser acessado no endereço "http://localhost:3333". 
   
 
-## :heavy_exclamation_mark: Rotas, Verbos e parâmetros
+## :heavy_exclamation_mark: Rotas, Verbos e Parâmetros
+
+#### /session:
+```
+- Verbo: Post
+- Rota para login na aplicação;
+- Parâmetros: body {
+  "email": "****@email.com", 
+  "password": "*****"
+}
+```
+
+#### /users:
+```
+- Verbo: GET
+- Rota para listas todos os usuários; apenas usuário admin;
+- Parâmetros: nenhum
+```
+
+```
+- Verbo: POST
+- Rota para criar um novo usuário; apenas admin;
+- Parâmetros: body {
+	"name": "Anderson", 
+	"email": "anderson@gmail.com", 
+	"password": "123456", 
+	"role": "agent" //usuário pode ser 'agent' ou 'admin'
+}
+```
+
+#### /users/id:
+```
+- Verbo: PUT
+- Rota para atualizar um usuário; apenas admin;
+- Parâmetros: body {
+	"name": "Anderson Raphael", 
+	"email": "anderson@admin.com", 
+	"old_password": "123456", 
+	"password": "654321", 
+	"confirm_password": "654321", 
+	"role": "admin"
+}
+```
+
+```
+- Verbo: DELETE
+- Rota para atualizar um usuário; apenas admin;
+- Parâmetros: ID do usuário a ser deletado no fim da rota;
+```
+
+
+#### /tasks:
+```
+- Verbo: GET
+- Rota para listar todas as tarefas criadas; 
+- Parâmetros: nenhum;
+```
+
+```
+- Verbo: POST
+- Rota para criar uma nova tarefa; 
+- Parâmetros: body {
+	"description": "Task 3", 
+	"responsible_id": "bc90bd05-12d7-4d7d-97f6-1aee7a8e0226",  
+	"status": "open"
+}
+```
+
+```
+- Verbo: PUT
+- Rota para atualizar uma tarefa; 
+- Parâmetros: body {
+	"task_id": "c249468c-0e0c-40a5-8595-e0b47037d6cf", 
+	"description": "Tarefa 1", 
+	"responsible_id": "7a017af9-90c4-4d81-b717-d5ab546cd2b7"
+}
+```
+
+```
+- Verbo: PATCH
+- Rota para atualizar o status de uma tarefa; 
+- Parâmetros: body {
+	"task_id": "4a7e59b3-1f5d-4492-8fb7-d0140898700e", 
+	"status": "done" // status da tarefa pode ser 'open', 'doing' ou 'done'
+}
+```
+
+#### /tasks/indicators:
+```
+- Verbo: GET
+- Rota para geração de indicadores;
+- Parâmetros: from(data inicial da busca no formato YYYY-MM-DD)&until(data final da busca no formato YYYY-MM-DD)
+A URL inteira ficaria: http://localhost:3333/tasks/indicators?from=2020-11-13&until=2020-11-11.
+```
 
 ## :memo: Tecnologias Utilizadas no Projeto
 
 - *``` NodeJS ```*
-- *``` TypeScript ```*
 - *``` Express ```*
 - *``` Eslint ```*
 - *``` Prettier ```*
-- *``` Axios ```*
-- *``` React ```*
+- *``` DateFNS ```*
+- *``` Postgres ```*
+- *``` Sequelize(ORM) ```*
+- *``` Yup ```*
 - *``` JWT ```*
 
 ---
