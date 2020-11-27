@@ -140,7 +140,7 @@ Tenha em sua máquina um banco de dados *``` Postgres ```* e forneça as credenc
 - Rota para listar todas as tarefas criadas; 
 - Parâmetros: nenhum;
 - Filtros: status(pode ser 'open', 'doing' ou 'done'), description(busca ocorrência da expressão na descrição da tarefa);
-Ex: http://localhost:3333/tasks?status=done&responsible:name:asc
+Ex: http://localhost:3333/tasks?status=done&description=teste
 
 - Ordenação: order=status(pode ser 'open', 'doing' ou 'done') ou orderresponsible:field_responsible:asc/desc. Responsible campos válidos: id, name, email, role; 
 Ex: http://localhost:3333/tasks?order=status:asc / http://localhost:3333/tasks?order=responsible:name:desc;
